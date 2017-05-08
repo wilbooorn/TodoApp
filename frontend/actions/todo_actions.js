@@ -1,18 +1,32 @@
 export const RECEIVE_TODOS = "RECEIVE_TODOS";
 export const RECEIVE_TODO = "RECEIVE_TODO";
+export const REMOVE_TODO = "REMOVE_TODO";
+export const UPDATE_TODO = "UPDATE_TODO";
 
-function receiveTodos(todos){
+export function receiveTodos(todos){
   return {
     type: RECEIVE_TODOS,
     todos
   };
 }
 
-function receiveTodo(todo){
+export function receiveTodo(todo){
   return {
     type: RECEIVE_TODO,
     todo
   };
 }
 
-export default { receiveTodo, receiveTodos };
+export function removeTodo(todo){
+  return {
+    type: REMOVE_TODO,
+    todo
+  };
+}
+
+export function updateTodo(todo){
+  return {
+    type: UPDATE_TODO,
+    todo
+  };
+}
