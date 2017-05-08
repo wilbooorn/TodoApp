@@ -9,13 +9,12 @@ class TodoList extends React.Component{
   }
 
   render(){
-
     return (
     <div>
 
       <ul>
         {this.props.todos.map((todo) => (
-          <TodoListItem key={todo.id} todo={todo} removeTodo={this.props.removeTodo} updateTodo={this.props.updateTodo}/>
+          <TodoListItem key={todo.id} todo={todo} updateTodo={this.props.updateTodo}/>
         ))}
       </ul>
       <TodoForm receiveTodo={this.props.receiveTodo} />
