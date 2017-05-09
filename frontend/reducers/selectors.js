@@ -3,4 +3,11 @@ function allTodos(state){
   return keys.map(key => state.todos[key]);
 }
 
+function stepsByTodoId(state, todoId){
+  let keys = Object.keys(state.steps).filter(function(key){
+    return key === todoId;
+  });
+  return keys.map(key => state.steps[key]);
+}
+
 export default allTodos;
